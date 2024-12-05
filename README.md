@@ -1,8 +1,8 @@
 # Anycubic PW0 Converter
 Converts Gerber + Excellon, SVG and PNG files to Anycubic Mono 3D printer files with PW0 image encoding.
 
-## Requirements (for Windows):
-tkinter, pillow, cairosvg, python-magic-bin
+## Requirements:
+tkinter, pillow, cairosvg, python-magic-bin (for Windows)
 
 Alternatively, you can just download the .exe file in [Releases](https://github.com/BleakyTex/Anycubic-PW0-Converter/releases/). Cairosvg isn't working very well on Windows anyway.
 

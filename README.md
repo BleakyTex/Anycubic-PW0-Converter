@@ -15,3 +15,5 @@ Specify the path to the printer file in the converter. Now you can open your PCB
 Tested on Anycubic Photon Mono 4 (.pm4n) and Mono M3 Plus (.pwmb) but should work for all Anycubic MSLA printers.
 
 ![scrn](https://github.com/user-attachments/assets/b3df7b47-1929-47d0-8fdb-c4dd6d859f7e)
+
+![IMG_20241204_002120](https://github.com/user-attachments/assets/43b54fb5-5c33-4980-9001-5db28166ae3d)

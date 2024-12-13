@@ -4,7 +4,7 @@ Converts Gerber + Excellon, SVG and PNG files to Anycubic Mono 3D printer files 
 ## Requirements:
 tkinter, pillow, cairosvg, python-magic-bin (for Windows)
 
-Alternatively, you can just download the .exe file in [Releases](https://github.com/BleakyTex/Anycubic-PW0-Converter/releases/). Cairosvg isn't working very well on Windows anyway.
+Alternatively, you can just download the .exe file in [Releases](https://github.com/BleakyTex/Anycubic-PW0-Converter/releases/). Cairosvg isn't working very well with Python on Windows anyway.
 
 # Usage
 To work with Gerber and Excellon files, this converter requires [gerbv](https://github.com/gerbv/gerbv/releases/). Download it, extract the archive contents and specify the path to gerbv.exe in the converter. Without gerbv only .svg and .png can be converted.

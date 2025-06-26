@@ -355,23 +355,24 @@ def rll_encode_image(image):
     '''
 
     print('\n---ENCODING TO RLL---')
-    color = 0
     length = 1 # how many pixels of the same color in a row
-    pixel_prev = 4 # anything but 0x0 or 0xF
+    pixel_prev = None
     white_pixel_count = 0
     rll_data = bytearray()
-
     pixels = image.getdata() # get all pixels as a sequence
+    
     for pixel in pixels:  # either 0x0 of 0xFF
         if pixel == 0xFF:
             white_pixel_count += 1
-
-        if (pixel != pixel_prev) or (length>=0xFFF):
-            encoded_word = ((color << 12) | length) & 0xFFFF
+        
+        if pixel_prev is None:
+            pixel_prev = pixel
+            
+        elif pixel != pixel_prev or length >= 0xFFF:
+            encoded_word = ((pixel_prev << 12) | length) & 0xFFFF
             encoded_word = encoded_word.to_bytes(2, byteorder='big')
             rll_data.extend(encoded_word)
-
-            color = pixel
+            
             length = 1
 
         else:
